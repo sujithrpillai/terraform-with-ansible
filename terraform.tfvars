@@ -1,0 +1,1 @@
+content_from_terraform_variable="Content_passed_from_terraform"

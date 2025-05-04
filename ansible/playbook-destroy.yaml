@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  vars:
+    content: "{{ content_from_terraform }}"
+  tasks:
+    - name: Deleting a file
+      file:
+        path: /ansible/file_generated_by_terraform_and_ansible.json
+        state: absent

@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  vars:
+    content: "{{ content_from_terraform }}"
+  tasks:
+    - name: Creating a file with content
+      copy:
+        dest: /ansible/file_generated_by_terraform_and_ansible.json
+        content: |
+          {{ content }}
